@@ -1,0 +1,459 @@
+:root{
+
+    /* colors */
+      --primary-color: #da7531;
+      --secondary-color: #FE9E67;
+      --secondary-light: #fad6a9;
+      --darkest-color: #da6931;
+     
+      --extra-grey: #C6BEB8;
+      --shade-one: #0005; 
+      --shade-two: #5550;
+      --shade-three: #101010;
+      --shade-four: #333333;
+      --article-bkgd-color: #C2C2C2;
+      --font-stack: "Open Sans", sans-serif;
+  
+  
+  
+          /* box shadow preset*/
+          --white-box-shadow: 0 0 .5rem #ffffff;
+          --black-box-shadow: 0 0 0.5rem #0002;
+  
+  
+          /* Heights */
+          --banner-base-height: 50vh;
+          --banner-large-height: 75vh;
+      
+      
+          /* Verticle align */
+          --banner-vertical-align: center;
+      
+      
+          /* Horizontal align */
+          --banner-hor-align: flex-start;
+        
+      
+          /* Text align */
+          --text-align: left;
+  
+          /* small photo */
+          --small-img-size: 35vh;
+  
+          /* font scales major third*/
+          --scale-xl: 2.441rem;
+          --scale-large: 1.953rem;
+          --scale-med: 1.563rem;
+          --scale-small: 1.235rem;
+  
+              /* PC headings use --lg
+            mobile headings use --sm */
+            /* extra font sizes */
+            --mobile-para: 0.5rem;
+            --xsm: 0.7rem;
+            --sm: 0.9rem;
+            --md: 1.1rem;
+            --lg: 1.5rem;
+            --xlg: 1.9rem;
+            --xxlg: 2.2rem;
+  
+  }
+  
+  
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Set core root defaults */
+  html {
+    line-height: 1.5;
+    font-family: var(--font-stack);
+    font-size: 1.2rem;
+    
+  }
+  
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    margin: 0;
+    /* background-color: black; */
+    
+  }
+
+  .dark-mode{
+    background-color: #333333;
+    color: #ffff;
+  }
+  
+  /* Update default margin */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  figure,
+  blockquote,
+  ul,
+  ol,
+  dl,
+  dd {
+    margin: 0 0 1.5rem;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a {
+    text-decoration-skip-ink: auto;
+    color: white;
+  }
+  
+  a:hover,
+  a:focus-visible {
+    color: #D96666;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  svg {
+    fill: currentColor;
+  }
+  
+  svg:not(:root) {
+    overflow: hidden;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* ---------- Containers ---------- */
+  
+  .container {
+    width: min(65em, 100%);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+  }
+
+  
+  .container--text {
+    width: min(45em, 100%);
+  }
+
+   /* ---------- Containers media queries ---------- */
+
+   @media (min-width: 45em) {
+  
+  }
+
+/* ---------- Main Page  ---------- */
+
+  header{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+  }
+
+  pre{
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
+  
+  
+  
+  /* ---------- Register Page  ----------------------------------------------------- */
+
+
+
+  
+  
+  
+  /* ---------- Login Page ----------------------------------------------------- */
+
+
+
+
+
+  /* ---------- Form ----------------------------------------------------- */
+    
+/* mobile first */
+
+.contact-me{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to top, var(--shade-three), var(--shade-one) );
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.contact__wrap{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3rem);
+    color: white;
+    border-radius: 1.5rem;
+    box-shadow:var(--white-box-shadow);
+    overflow: hidden;
+}
+
+.form-grid{
+    padding: 3rem 2.5rem;
+    display: grid;
+    --cols: 1;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    gap: 1.5rem;
+}
+
+.contact__title{
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+input, select, textarea {
+    color: black;
+    background-color: white;
+    font-weight: 200;
+   
+}
+
+
+.checkbox{
+    width: 1rem;
+    height: 1rem;
+
+}
+
+
+
+#email-radio, #tel-radio{
+    width: 1rem;
+    height: 1rem;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.email-radio, .phone-radio{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.email-radio {
+  margin-right: 2rem;
+}
+
+
+
+.form-unit__row{
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+input, select, textarea, .form-btn{
+    display: block;
+    width: 100%;
+    padding: .25rem;
+    border: 0.125rem solid black;
+    border-radius: .25rem;
+
+}
+
+#message::placeholder {
+  color: black; 
+}
+
+.terms-link{
+    color: var(--secondary-light);
+}
+
+
+.full-width-label{
+    display: block;
+    width: 100%;
+    font-size: .875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+.regFormError {
+  display: block;
+  color: red;
+  text-transform: lowercase;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+/* redone contact page with no form <------------------ */
+
+.support-content{
+  background: linear-gradient(to bottom, var(--shade-three), var(--shade-one)); 
+  width: 100%;
+  height: 100vh;
+}
+
+.support-content .container{
+  
+  padding-top: var(--mobile-pd-top-cont);
+  height: 80%;
+}
+
+.support-case-gd2{
+ 
+}
+
+.support-case{
+  text-align: center;
+  color: white;
+  margin: 0.1rem;
+}
+
+.support-case p{
+  font-size: var(--mobile-para);
+}
+
+.support__h1{
+   color: white;
+   font-size: var(--sm);
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.support-case__logos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media only screen and (min-width: 45em){
+  .support-content .container{
+    padding-top: var(--pc-pd-top-cont);
+  }
+
+  .support__btn{
+    padding: var(--pc-btn);
+    font-size: var(--lg);
+  }
+
+  .support__h1{
+     font-size: var(--xlg);
+  }
+
+  .support-case p{
+    font-size: var(--sm);
+  }
+
+  .support-case{
+    margin: 4rem;
+  }
+
+  .support-case-gd2{
+      padding: 0;
+      margin: 2rem;
+  }
+
+
+} 
+
+/*----------- CODE TO IMPLEMENT BELOW -----------*/
+
+/* for styles, this make it easier  */
+
+ fieldset {
+    display: contents;
+    padding: 0;
+    margin: 0;
+    border: none;
+} 
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+
+}
+
+.radio-grid{
+    display: grid;
+    gap: 1.3rem;
+    grid-template-columns: subgrid;   
+} 
+
+.login-btn:hover,
+.login-btn:focus-visible,
+.register-btn:hover,
+.register-btn:focus-visible{
+   cursor: pointer;
+   background: linear-gradient(to left, var(--primary-color), var(--secondary-light) );  
+ 
+  
+}
+
+
+
+/* ---------- Media Queries ---------- */
+
+@media only screen and (min-width: 45em){
+   
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+      .full {
+        grid-column: 1 / -1;
+      }
+
+}

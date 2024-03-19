@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kierans JWT LifeCycle Project</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <header>
+        <h1>Using JWT</h1>
+    </header>
+    <main>
+    
+ <!-- Btns ----------------------------------------------------------------->
+        <div class="container">
+            <p><button id="btnLive">Click to Test Server</button></p>
+            <p><button id="btnToken">Click to Get Token</button></p>
+            <p><button id="btnVerify">Click to verify Token</button></p>
+            <p><button id="darkMode">Dark Mode</button></p>
+
+            <pre id="output"></pre>
+        </div>
+
+ <!-- Register ----------------------------------------------------------------->
+
+        <section class="sign-up">
+            <div class="container container--text">
+             <div class="sign-up__wrap">
+                  
+                <form action="#" class="sign-up__form">
+                    <div class="form-grid">
+                      <fieldset>
+    
+                        <!-- title -->
+                        <legend>
+                            <h1 class="sign-up__title">Register</h1>
+                            <p class="regFormError"></p>
+                        </legend>
+                    
+                       
+
+                        <!-- Name -->
+                        <div class="form-unit  full">
+                            <label class="full-width-label" for="fName">Full Name*</label>
+                            <input 
+                                type="text" 
+                                id="fName" 
+                                name="fName"
+                                value="kieran" 
+                                required
+                                >
+                        </div>
+
+                        
+
+                            <!-- username -->
+                            <div class="form-unit  full">
+                                <label class="full-width-label" for="uName">Username*</label>
+                                <input 
+                                    type="text" 
+                                    id="uName" 
+                                    name="uName" 
+                                    value="kiirynn" 
+                                    required
+                                    >
+                                   
+                            </div>
+
+                            
+
+                            <!-- password -->
+                            <div class="form-unit  full">
+                                <label class="full-width-label" for="pass">Password*</label>
+                                <input 
+                                    type="text" 
+                                    id="pass" 
+                                    name="pass" 
+                                    value="youKnow" 
+                                    required
+                                    >
+                                  
+                            </div>
+
+                        
+                            <!-- confirm password -->
+                            <div class="form-unit  full">
+                                <label class="full-width-label" for="confirmPass">Confirm Password*</label>
+                                <input 
+                                    type="text" 
+                                    id="confirmPass" 
+                                    name="confirmPass" 
+                                    value="youKnow" 
+                                    required
+                                    >
+                                    
+                            </div>
+    
+                        <!-- Email & Phone (needs media query) *************** -->
+                        <div class="form-unit double">  
+                            <label class="full-width-label" for="email">Email*  <input  
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                value="poro0002@gmail.com"
+                                required
+                                >
+                                
+                            </label>
+    
+                            <label class="full-width-label" for="tel">Phone*  <input 
+                                type="tel" 
+                                id="tel" 
+                                name="tel" 
+                                required
+                                value="17059350876" 
+                                >
+                              
+                            </label>
+                        
+                        
+                        </div>
+    
+
+                        <!-- Terms of Service -->
+                        <div class="form-unit  full">
+                            <div class="form-unit__row">
+                            <input 
+                                class="checkbox" 
+                                type="checkbox" 
+                                required
+                                checked
+                                >
+                            <h4> I Consent to the <a href="#" class="terms-link">Terms Of Service</a></h4>
+                            </div>
+                        </div>
+    
+                        <!-- Submit Button -->
+                        <div class="form-unit full">
+                            <input  
+                                type="submit" 
+                                class="register-btn" 
+                                value="Register">
+                        </div>
+                    </fieldset>
+    
+                </form>
+    
+             </div>
+          </div>
+        </section>
+
+    <!-- Login ----------------------------------------------------------------->
+
+        <section class="login">
+            <div class="container container--text">
+             <div class="sign-up__wrap">
+                  
+                <form action="#" class="sign-up__form">
+                    <div class="form-grid">
+                      <fieldset>
+    
+                        <!-- title -->
+                        <legend>
+                            <h1 class="sign-up__title">Login</h1>
+                        </legend>
+                    
+    
+                        <!-- Name -->
+                        <div class="form-unit  full">
+                            <label class="full-width-label" for="logUname">Username*</label>
+                            <input 
+                                type="text" 
+                                id="logUname" 
+                                name="logUname"
+                                value="kiirynn" 
+                                required
+                                >
+                        </div>
+
+                            <!-- username -->
+                            <div class="form-unit  full">
+                                <label class="full-width-label" for="logPass">Password*</label>
+                                <input 
+                                    type="text" 
+                                    id="logPass" 
+                                    name="logPass"
+                                    value="youKnow" 
+                                    required
+                                    >
+                            </div>
+
+    
+                        <!-- Submit Button -->
+                        <div class="form-unit full">
+                            <input  
+                                type="submit" 
+                                class="login-btn" 
+                                value="Login">
+                        </div>
+                    </fieldset>
+    
+                </form>
+    
+             </div>
+          </div>
+        </section>
+
+
+
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
